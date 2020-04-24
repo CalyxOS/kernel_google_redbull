@@ -5822,9 +5822,8 @@ static void ipv6_ifa_notify(int event, struct inet6_ifaddr *ifp)
 
 #ifdef CONFIG_SYSCTL
 
-static
-int addrconf_sysctl_forward(struct ctl_table *ctl, int write,
-			   void __user *buffer, size_t *lenp, loff_t *ppos)
+static int addrconf_sysctl_forward(struct ctl_table *ctl, int write,
+		void *buffer, size_t *lenp, loff_t *ppos)
 {
 	int *valp = ctl->data;
 	int val = *valp;
@@ -5848,9 +5847,8 @@ int addrconf_sysctl_forward(struct ctl_table *ctl, int write,
 	return ret;
 }
 
-static
-int addrconf_sysctl_mtu(struct ctl_table *ctl, int write,
-			void __user *buffer, size_t *lenp, loff_t *ppos)
+static int addrconf_sysctl_mtu(struct ctl_table *ctl, int write,
+		void *buffer, size_t *lenp, loff_t *ppos)
 {
 	struct inet6_dev *idev = ctl->extra1;
 	int min_mtu = IPV6_MIN_MTU;
@@ -5920,9 +5918,8 @@ static int addrconf_disable_ipv6(struct ctl_table *table, int *p, int newf)
 	return 0;
 }
 
-static
-int addrconf_sysctl_disable(struct ctl_table *ctl, int write,
-			    void __user *buffer, size_t *lenp, loff_t *ppos)
+static int addrconf_sysctl_disable(struct ctl_table *ctl, int write,
+		void *buffer, size_t *lenp, loff_t *ppos)
 {
 	int *valp = ctl->data;
 	int val = *valp;
@@ -5946,9 +5943,8 @@ int addrconf_sysctl_disable(struct ctl_table *ctl, int write,
 	return ret;
 }
 
-static
-int addrconf_sysctl_proxy_ndp(struct ctl_table *ctl, int write,
-			      void __user *buffer, size_t *lenp, loff_t *ppos)
+static int addrconf_sysctl_proxy_ndp(struct ctl_table *ctl, int write,
+		void *buffer, size_t *lenp, loff_t *ppos)
 {
 	int *valp = ctl->data;
 	int ret;
@@ -5989,7 +5985,7 @@ int addrconf_sysctl_proxy_ndp(struct ctl_table *ctl, int write,
 }
 
 static int addrconf_sysctl_addr_gen_mode(struct ctl_table *ctl, int write,
-					 void __user *buffer, size_t *lenp,
+					 void *buffer, size_t *lenp,
 					 loff_t *ppos)
 {
 	int ret = 0;
@@ -6051,7 +6047,7 @@ out:
 }
 
 static int addrconf_sysctl_stable_secret(struct ctl_table *ctl, int write,
-					 void __user *buffer, size_t *lenp,
+					 void *buffer, size_t *lenp,
 					 loff_t *ppos)
 {
 	int err;
@@ -6118,8 +6114,7 @@ out:
 
 static
 int addrconf_sysctl_ignore_routes_with_linkdown(struct ctl_table *ctl,
-						int write,
-						void __user *buffer,
+						int write, void *buffer,
 						size_t *lenp,
 						loff_t *ppos)
 {
@@ -6218,10 +6213,8 @@ int addrconf_disable_policy(struct ctl_table *ctl, int *valp, int val)
 	return 0;
 }
 
-static
-int addrconf_sysctl_disable_policy(struct ctl_table *ctl, int write,
-				   void __user *buffer, size_t *lenp,
-				   loff_t *ppos)
+static int addrconf_sysctl_disable_policy(struct ctl_table *ctl, int write,
+				   void *buffer, size_t *lenp, loff_t *ppos)
 {
 	int *valp = ctl->data;
 	int val = *valp;
