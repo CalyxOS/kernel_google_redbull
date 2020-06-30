@@ -141,3 +141,11 @@ arch/arm64/boot/dts/vendor/
 
 # Tech package directories
 techpack/
+
+# Other out-of-tree drivers
+/drivers/staging/fts
+/drivers/staging/sec
+/drivers/staging/data-kernel
+/drivers/staging/fw-api
+/drivers/staging/qca-wifi-host-cmn
+/drivers/staging/qcacld-3.0
