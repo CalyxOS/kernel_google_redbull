@@ -56,3 +56,4 @@ obj-$(CONFIG_EROFS_FS)		+= erofs/
 obj-$(CONFIG_GOOGLE_WLAN_MAC)	+= wlan_mac/
 obj-$(CONFIG_QCA_CLD_WLAN)	+= qcacld-3.0/
 obj-$(CONFIG_TOUCHSCREEN_FTS)	+= fts/
+obj-$(CONFIG_TOUCHSCREEN_SEC_TS)	+= sec/
