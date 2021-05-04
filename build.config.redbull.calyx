@@ -18,6 +18,7 @@ LINUX_GCC_CROSS_COMPILE_PREBUILTS_BIN=../prebuilts/gcc/linux-x86/aarch64/aarch64
 LINUX_GCC_CROSS_COMPILE_ARM32_PREBUILTS_BIN=../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin
 LINUX_GCC_CROSS_COMPILE_COMPAT_PREBUILTS_BIN=$LINUX_GCC_CROSS_COMPILE_ARM32_PREBUILTS_BIN
 LIBUFDT_PREBUILTS_BIN=../prebuilts/misc/linux-x86/libufdt
+LZ4_PREBUILTS_BIN=../prebuilts/misc/linux-x86/lz4
 DTC_EXT=${ROOT_DIR}/../prebuilts/kernel-build-tools/linux-x86/bin/dtc
 export DTC_EXT
 DTC_OVERLAY_TEST_EXT=${ROOT_DIR}/../prebuilts/kernel-build-tools/linux-x86/bin/ufdt_apply_overlay
