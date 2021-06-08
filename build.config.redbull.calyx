@@ -5,8 +5,8 @@ KMI_GENERATION=0
 CROSS_COMPILE=aarch64-linux-android-
 CROSS_COMPILE_ARM32=arm-linux-androideabi-
 CROSS_COMPILE_COMPAT=$CROSS_COMPILE_ARM32
-NM=llvm-nm
-OBJCOPY=llvm-objcopy
+
+LLVM=1
 DEPMOD=depmod
 CLANG_PREBUILT_BIN=../prebuilts/clang/host/linux-x86/clang-r383902/bin
 BUILDTOOLS_PREBUILT_BIN=build/build-tools/path/linux-x86
