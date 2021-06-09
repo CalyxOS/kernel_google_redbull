@@ -16,6 +16,24 @@
       "message": "TODO: Deal with all this",
       "revId": "1feaf91568ce7d74898e4c2815228ebff38e957e",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "580ef5a1_65435ccf",
+        "filename": "build.config.common",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-06-09T01:10:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "809d7658_279e7191",
+      "revId": "1feaf91568ce7d74898e4c2815228ebff38e957e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
