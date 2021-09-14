@@ -33,9 +33,11 @@ vmlinux
 System.map
 .config
 "
+if [ -z "${FAST_BUILD}" ]; then
 COMPRESS_UNSTRIPPED_MODULES=1
 UNSTRIPPED_MODULES="
 *.ko
 "
+fi
 IN_KERNEL_MODULES=1
 STOP_SHIP_TRACEPRINTK=1
