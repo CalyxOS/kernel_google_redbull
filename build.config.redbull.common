@@ -1,10 +1,6 @@
 . ${ROOT_DIR}/${KERNEL_DIR}/build.config.common
 DEFCONFIG=redbull_defconfig
-EXT_MODULES="
-redbull/private/msm-google-modules/wlan/qcacld-3.0
-redbull/private/msm-google-modules/touch/fts
-redbull/private/msm-google-modules/touch/sec
-"
+EXT_MODULES_MAKEFILE=${KERNEL_DIR}/Makefile.ext_modules.redbull
 
 if [ -n "${BUILD_BOOT_IMG}" ]; then
 BUILD_INITRAMFS=1
