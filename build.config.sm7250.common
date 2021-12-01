@@ -1,6 +1,6 @@
 DEFCONFIG=vendor/lito_defconfig
 EXT_MODULES="
-private/msm-google-modules/wlan/qcacld-3.0
+redbull/private/msm-google-modules/wlan/qcacld-3.0
 "
 BUILD_INITRAMFS=1
 MKBOOTIMG_PATH=tools/mkbootimg/mkbootimg.py
