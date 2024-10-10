@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9714c6d1_75f93951",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-10-10T22:17:39Z",
+      "side": 1,
+      "message": "The reason for this change is that a new symbol was added via android-4.19-stable which breaks the GKI symbol list checks. The scripts to regenerate the lists don\u0027t work in our kernel build setup (or I couldn\u0027t figure out how to do it). We don\u0027t really care about GKI compatibility, let alone this is 4.19 that does not even have official GKIs.",
+      "revId": "7107df41f59371d2ec437549699ff7cce553e874",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
