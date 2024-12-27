@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f67292f5_b0ea8d6e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-12-27T11:18:33Z",
+      "side": 1,
+      "message": "barbet:\n\n1. SIM Works\n2. Connects to existing WPA3 network\n3. Connects to lynx WPA3 hotspot",
+      "revId": "33c879e9ee2414e1da3d1ecfcd776a043c9e68af",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
