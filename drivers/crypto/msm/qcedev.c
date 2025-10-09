@@ -1878,6 +1878,7 @@ static inline long qcedev_ioctl(struct file *file,
 			err = -ENOTTY;
 			goto exit_free_qcedev_areq;
 		}
+		/* Fall-through */
 	case QCEDEV_IOCTL_SHA_UPDATE_REQ:
 		{
 		struct scatterlist sg_src;
@@ -1928,9 +1929,10 @@ static inline long qcedev_ioctl(struct file *file,
 				handle->sha_ctxt.diglen);
 		mutex_unlock(&hash_access_lock);
 		if (copy_to_user((void __user *)arg, &qcedev_areq->sha_op_req,
-					sizeof(struct qcedev_sha_op_req)))
+					sizeof(struct qcedev_sha_op_req))) {
 			err = -EFAULT;
 			goto exit_free_qcedev_areq;
+		}
 		}
 		break;
 
@@ -2020,9 +2022,10 @@ static inline long qcedev_ioctl(struct file *file,
 				handle->sha_ctxt.diglen);
 		mutex_unlock(&hash_access_lock);
 		if (copy_to_user((void __user *)arg, &qcedev_areq->sha_op_req,
-					sizeof(struct qcedev_sha_op_req)))
+					sizeof(struct qcedev_sha_op_req))) {
 			err = -EFAULT;
 			goto exit_free_qcedev_areq;
+		}
 		}
 		break;
 
@@ -2285,8 +2288,11 @@ static int qcedev_remove(struct platform_device *pdev)
 	podev = platform_get_drvdata(pdev);
 	if (!podev)
 		return 0;
+
+	qcedev_ce_high_bw_req(podev, true);
 	if (podev->qce)
 		qce_close(podev->qce);
+	qcedev_ce_high_bw_req(podev, false);
 
 	if (podev->platform_support.bus_scale_table != NULL)
 		msm_bus_scale_unregister_client(podev->bus_scale_handle);
