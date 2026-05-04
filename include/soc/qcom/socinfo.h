@@ -170,6 +170,8 @@ enum socinfo_parttype {
         of_machine_is_compatible("qcom,msm8953")
 #define early_machine_is_sdm450()	\
         of_machine_is_compatible("qcom,sdm450")
+#define early_machine_is_qcm2150()      \
+        of_machine_is_compatible("qcom,qcm2150")
 #else
 #define early_machine_is_msm8916()	\
 	of_flat_dt_is_compatible(of_get_flat_dt_root(), "qcom,msm8916")
