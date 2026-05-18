@@ -2189,7 +2189,7 @@ long kgsl_ioctl_gpu_aux_command(struct kgsl_device_private *dev_priv,
 		return -EINVAL;
 
 	if ((param->flags & KGSL_GPU_AUX_COMMAND_SYNC) &&
-	    (param->numsyncs > KGSL_MAX_SYNCPOINTS))
+		(param->numsyncs > KGSL_MAX_SYNCPOINTS))
 		return -EINVAL;
 
 	context = kgsl_context_get_owner(dev_priv, param->context_id);
